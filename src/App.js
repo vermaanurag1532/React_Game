@@ -1,24 +1,20 @@
-import logo from './logo.svg';
-import './App.css';
+import { useState } from "react";
+import Header from "./components/Header/Header";
+import Start from "./components/Start.jsx/Start";
+import Cards from "./components/Cards/Cards";
+import "./App.css";
 
 function App() {
+  const [start, setStart] = useState(true);
+  const setStartHandler = () => {
+    setStart(false);
+  };
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <Header />
+      {start ? <Start onClick={setStartHandler} /> : <Cards />}
+    </>
   );
 }
 

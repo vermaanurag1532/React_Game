@@ -1,0 +1,10 @@
+.header {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    background-color: black;
+    color: rgb(45, 168, 240);
+    border-radius: 14px;
+    padding: 0.2rem;
+    margin: 10px;
+}
